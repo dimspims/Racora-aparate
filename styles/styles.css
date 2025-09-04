@@ -1,0 +1,431 @@
+*{
+    box-sizing: border-box;
+}
+html, body{
+    padding:0;
+    margin:0;
+}
+body{
+    background-color: hsl(59, 95%, 63%);
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 1.1em;
+    margin:0 0.5%;
+}
+nav {
+    display: flex;
+    align-items: center;
+    padding: 5px 20px;
+    border-bottom: 2px solid hsl(59, 95%, 63%);
+    flex-flow: row nowrap;  /* элементы в ряд */
+    justify-content: left; /* логотип и кнопки слева */
+    gap: 100px; /* расстояние между логотипом и кнопками */
+}
+.menu {
+    display: flex;
+    gap: 100px;  /* расстояние между кнопками */
+    margin-left: 0; /* убираем возможные авто-отступы */
+}
+.menu-btn {
+    display: inline-block;
+    padding: 10px 25px;
+    background-color: rgb(101, 240, 8);;
+    color: #c40000;
+    border: 2px solid #c40000;
+    border-radius: 12px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: all 0.3s;
+}
+.menu-btn:hover {
+    background-color: #c40000;
+    color: white;
+    cursor: pointer;
+}
+nav img{
+    width: 100px;
+}
+nav .link_nav:link, nav .link_nav:visited{
+    color: rgb(247, 5, 5);
+    text-decoration: none;
+    padding: 10px 20px;
+    transition: all 1s;
+    font-weight: bold;
+    border-radius: 20px;     /* <-- закругление углов */
+    transition: 0.3s;        /* плавный эффект при наведении */
+}
+nav .link_nav:active{
+    color: rgb(244, 248, 5);
+}
+nav .link_nav:hover{
+    background-color: rgb(247, 5, 5);
+    color: rgb(101, 240, 8);
+    transition: all 1s;
+}
+.slush-main-img {
+    width: 100%; 
+    height: 86vh;
+    object-fit: cover; 
+    display: block; 
+}
+.slush-flex {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    gap: 500px;
+    padding: 20px; /* Отступы по бокам */
+    flex-wrap: wrap;
+}
+.slush-card {
+    background: linear-gradient(145deg, #ffe3e0);
+    border-radius: 12px;
+    padding: 20px;
+    margin-top: 20px;
+}
+.slush-card h3 {
+    color: #ff6b6b;
+    margin-bottom: 12px;
+}
+.slush-features {
+    list-style: none;
+    padding-left: 0;
+    margin-bottom: 15px;
+    font-weight: bold;
+}
+.slush-features li {
+    margin-bottom: 10px;
+    font-size: 16px;
+}
+.slush-features li::before {
+    content: "";
+    display: inline-block;
+    width: 0.5em;
+}
+.slush-card .slush-note {
+    font-style: italic;
+    color: #555;
+    margin-top: 10px;
+}
+.slush-image {
+    width: 100%;
+    border-radius: 12px;
+    margin-bottom: 15px;
+    object-fit: cover;
+}
+.slush-image {
+    width: 100%;
+    max-width: 600px; /* ограничивает размер по ширине */
+    height: auto;     /* сохраняет пропорции */
+    border-radius: 12px;
+    margin-bottom: 15px;
+    object-fit: cover; /* подгоняет содержимое под контейнер без искажения */
+}
+section{
+    width: 100%;
+}
+hr{
+    border: none;
+    border-bottom: 2px solid  hsl(59, 95%, 63%);
+}
+.slush-img {
+    max-height: 100%; 
+    width: auto; 
+    max-width: 45%; 
+    object-fit: contain; 
+}
+.left-img {
+    margin-bottom: 0; /* Или любое положительное значение, чтобы опустить */
+    height: 555px;
+    object-fit: cover;
+}
+.right-img {
+    margin-bottom: 0px; /* Поднимает правую картинку вверх */
+}
+.wrapper{
+    background-color: rgba(0,0,0,0.7);
+    background: linear-gradient(to right, rgba(0,0,0,1), rgba(0,0,0,0));
+    width: 100%;
+    height: 100%;
+    position: relative;
+    opacity: 0;
+    transition: all 1s;
+}
+.wrapper_content{
+    width: 50%;
+    padding: 15px;
+    position: absolute;
+    bottom: 7%;
+    left: 3%;
+}
+.wrapper p{
+    color: white;
+}
+.wrapper a:link, .wrapper a:visited{
+    padding: 17px;
+    background-color: #005F6A;
+    color: white;
+    text-decoration: none;
+    border-radius: 20px;
+    letter-spacing: 2px;
+    font-weight: bold;
+    transition: all 1s;
+}
+.wrapper:hover{
+    opacity: 0.8;
+    transition: all 1s;
+}
+.wrapper a:hover{
+    background-color: tomato;
+    transform: scale(1.1, 1.1);
+    transition: all 1s;
+}
+h2{
+    color: rgb(247, 5, 5);
+    text-align: center;
+}
+.text{
+    padding: 20px;
+    }
+
+.text p{
+    line-height: 1.5;
+    text-align: justify;
+    padding: 5px 20px;
+    font-size: 1.1em;
+}
+.gallery{
+    margin: 0 auto;
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: flex-start;
+    align-items: flex-start;
+}
+.gallery .app{
+    background-color: rgb(101, 240, 8);
+    margin: 15px auto;
+    border: 1px solid rgb(248, 3, 3);
+    border-radius: 7px;
+    box-shadow:5px 5px 5px rgb(90, 39, 39);
+    width: 85%;
+    transition: all 1s;
+}
+.gallery .app:hover{
+    transform: scale(1.02, 1.02);
+    box-shadow: -5px -5px 5px rgb(143, 3, 3);
+    transition: all 1s;
+}
+.gallery .app h4, .gallery .card p{
+    padding: 0 15px;
+    text-align: center;
+}
+.gallery .app p{
+    line-height: 1.5;
+    font-size: 1em;
+    text-align: center;
+}
+.gallery .app img{
+    width: 100%;
+    height: 400px; 
+    object-fit: contain; 
+    border-top-left-radius: 7px;
+    border-top-right-radius: 7px;
+}
+.gallery .app img:hover{
+    /*filter: grayscale(50%) blur(1px);*/
+    /*filter: sepia(50%) grayscale(50%);*/
+    filter: saturate(150%) grayscale(50%);
+}
+.contacts{
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: center;
+    align-items: flex-start;
+}
+.contacts .form, .contacts .map{
+    width: 90%;
+    margin: 15px auto;
+    filter:drop-shadow(5px 5px 5px gray);
+}
+.contacts .map iframe{
+    width: 100%;
+    height: 390px;
+    border: none;
+    border-radius: 7px;
+}
+/* Основной контейнер формы */
+/* Общие стили для группы */
+.group {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 7px 0;
+    flex-wrap: wrap; 
+}
+.dva {
+    width: 48%; 
+}
+
+.odin {
+    width: 100%; 
+}
+input, textarea, select {
+    width: 100%;
+    padding: 10px;
+    margin-top: 7px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    box-sizing: border-box; 
+}
+
+textarea {
+    resize: vertical; 
+}
+
+/* Стили для кнопки */
+input[type="submit"] {
+    background-color: #4CAF50;
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+h3{
+    text-align: center;
+}
+input:focus, select:focus{
+    outline: none;
+    background-color: rgba(255, 99, 71, 0.2);
+    transition: all 0.5s;
+}
+input[type="submit"]{
+    width: 50%;
+    margin-top: 20px;
+    padding: 12px;
+    background-color: #005F6A;
+    color: white;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-weight: bold;
+    transition: all 1s;
+}
+input[type="submit"]:hover{
+    background-color: tomato;
+    transform: scale(1.1, 1.1);
+    transition: all 1s;
+}
+.container{
+    width: 100%;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-around;
+    align-items: center;
+}
+footer img{
+    width: 40px;
+    margin: 10px;
+    transition: all 1s;
+}
+
+footer a:link, footer a:visited{
+    text-decoration: none;
+    background-color: none;
+    padding: 0;
+    margin: 0;
+}
+footer img:hover{
+    filter:drop-shadow(5px 5px 5px gray);
+    transform: scale(1.2, 1.2);
+    transition: all 1s;
+}
+.scroll-to-top {
+    position: fixed; /* кнопку всегда видима */
+    bottom: 20px; /* Расстояние от нижнего края */
+    right: 20px; /* Расстояние от правого края */
+    width: 40px; /* Ширина кнопки */
+    height: 40px; /* Высота кнопки */
+    background-color: #4CAF50; /* Зелёный цвет */
+    border-radius: 50%; /* Делает её круглой */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+    z-index: 1000; /* кнопка поверх других элементов */
+    text-decoration: none; /* Убирает подчеркивание */
+    transition: background-color 0.3s; /* Плавный переход при наведении */
+}
+.scroll-to-top::after {
+    content: "▲"; /*стрелка вверх */
+    font-size: 20px;
+    color: white; /* Цвет стрелки */
+}
+
+/* Эффект при наведении */
+.scroll-to-top:hover {
+    background-color: #45a049; /* Более темный зелёный при наведении */
+}
+/* определение стилей ширины элементов для средних экранов*/
+@media screen and (min-width: 600px){
+    p{ 
+        font-size: 1.2em;
+    }
+    .gallery{
+        display: flex;
+        flex-flow: row wrap;
+    }
+    .gallery .card{
+        width: 45%;
+    }
+    nav{
+        display: flex;
+        flex-flow: row wrap;
+        justify-content: flex-start;
+        align-items: center;
+    }
+    
+}
+    
+
+/* определение стилей ширины элементов для экранов десктопов (или большихих экранов)*/
+@media screen and (min-width: 990px){
+    p{ 
+        font-size: 1.3em;
+    }
+    .gallery{
+        display: flex;
+        flex-flow: row wrap;
+    }
+    .gallery .app{
+        width: 22%;
+    }
+    .contacts{
+        display: flex;
+        flex-flow: row wrap;
+    }
+    .contacts .form, .contacts .map{
+        width: 45%;
+    }
+
+    /* стили для представления формы на большом экране*/
+    .group{
+        display: flex;
+        flex-flow: row wrap;
+        justify-content: center;
+        align-items: center;
+    }
+    .odin{
+        width: 97%;
+    }
+    .dva{
+        width: 48%;
+        margin: 1%;
+    }
+    .tri{
+        width: 31%;
+        margin: 1%;
+    }
+}
+::selection{
+    background-color: tomato;
+    color: whitesmoke;
+}
