@@ -365,6 +365,56 @@ footer img:hover{
     background-color: #45a049; /* Более темный зелёный при наведении */
 }
 /* определение стилей ширины элементов для средних экранов*/
+/* ===== Страница продукта ===== */
+.product-page {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    padding: 40px;
+    align-items: flex-start;
+}
+
+.product-image img {
+    max-width: 400px;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+}
+
+.product-details {
+    flex: 1;
+    min-width: 280px;
+}
+
+.product-details h1 {
+    font-size: 2em;
+    margin-bottom: 15px;
+}
+
+.product-details ul {
+    list-style: none;
+    padding: 0;
+}
+
+.product-details ul li {
+    margin-bottom: 8px;
+}
+
+.buy-button {
+    display: inline-block;
+    margin-top: 20px;
+    padding: 12px 24px;
+    background-color: #ff3333;
+    color: white;
+    text-decoration: none;
+    border-radius: 8px;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.buy-button:hover {
+    background-color: #cc0000;
+}
+
 @media screen and (min-width: 600px){
     p{ 
         font-size: 1.2em;
